@@ -57,6 +57,12 @@ function App() {
 
   // Function to copy the generated password to the clipboard
   let copyPass = () => {
+    if (!finalpassword) {
+      toast.error("Please generate password first", {
+        className: "custom-toast",
+      });
+      return;
+    }
     navigator.clipboard.writeText(finalpassword); // Copy the password to clipboard
     toast.info("Password copied to clipboard!", {
       className: "custom-toast",
