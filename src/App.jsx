@@ -58,7 +58,7 @@ function App() {
   // Function to copy the generated password to the clipboard
   let copyPass = () => {
     if (!finalpassword) {
-      toast.error("Please generate password first", {
+      toast.error("Please generate password first!", {
         className: "custom-toast",
       });
       return;
@@ -67,6 +67,16 @@ function App() {
     toast.info("Password copied to clipboard!", {
       className: "custom-toast",
     });
+  };
+
+  const clearInput = () => {
+    if (finalpassword) {
+      setfinalPass("");
+      setlowercase(false);
+      setuppercase(false);
+      setnumber(false);
+      setsymbols(false);
+    }
   };
 
   return (
@@ -91,6 +101,7 @@ function App() {
             className="passwordInput"
             value={finalpassword}
           ></input>
+
           <p>
             <label>Maximum length</label>
             <input
@@ -152,6 +163,12 @@ function App() {
               onClick={copyPass} // Call copyPass function
             >
               Copy password
+            </button>
+            <button
+              className="btn btn-primary btn-lg clrBtn"
+              onClick={clearInput} // Call clearInput function
+            >
+              Clear password
             </button>
           </div>
         </div>
