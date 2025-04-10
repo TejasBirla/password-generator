@@ -25,7 +25,7 @@ function App() {
       if (lowercase) passChar = passChar + lowerChar;
       if (number) passChar = passChar + numberChar;
       if (symbols) passChar = passChar + symbolChar;
-
+      
       // Validate the password length
       if (passwordLen > 20 || passwordLen < 10) {
         toast.error(
@@ -103,10 +103,10 @@ function App() {
           ></input>
 
           <p>
-            <label>Maximum length</label>
+            <label>Minimum length</label>
             <input
               type="number"
-              className="maxlenInput"
+              className="min-maxlenInput"
               max={20}
               min={10}
               value={passwordLen}
