@@ -66,8 +66,7 @@ body,
   right: 0px;
 }
 
-.clrBtn
-{
+.clrBtn {
   margin-left: 14px;
 }
 
@@ -86,14 +85,14 @@ body,
 }
 
 
-.maxlenInput {
+.min-maxlenInput {
   padding: 2px;
   font-family: serif;
   width: 115px;
   height: auto;
 }
 
-.maxlenInput:focus {
+.min-maxlenInput:focus {
   outline: none;
 }
 
